@@ -39,6 +39,7 @@ if (document.body.contains(document.querySelector(".slider"))) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
+    dir: "rtl",
     responsive: [
       {
         breakpoint: 768,
@@ -61,6 +62,7 @@ if (document.body.contains(document.querySelector(".slider-2"))) {
     autoplay: true,
     autoplaySpeed: 3500,
     dots: true,
+    rtl: true,
     responsive: [
       {
         breakpoint: 768,
@@ -95,13 +97,13 @@ const showProducts = () => {
 const setSVG = () => {
   let slickPrev = document.querySelectorAll(".slick-prev");
   let slickNext = document.querySelectorAll(".slick-next");
-  slickPrev.forEach(ele => {
+  slickNext.forEach(ele => {
     ele.innerHTML = `<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4009 0.462463C15.1997 1.07908 15.1997 2.07881 14.4009 2.69543L4.93816 10L14.4009 17.3046C15.1997 17.9212 15.1997 18.9209 14.4009 19.5375C13.6021 20.1542 12.307 20.1542 11.5082 19.5375L0.5991 11.1165C-0.1997 10.4999 -0.1997 9.50013 0.5991 8.88351L11.5082 0.462463C12.307 -0.154154 13.6021 -0.154154 14.4009 0.462463Z" fill="#2E3192"/>
   </svg>
   `;
   });
-  slickNext.forEach(ele => {
+  slickPrev.forEach(ele => {
     ele.innerHTML = `<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5991 0.462463C1.3979 -0.154154 2.69301 -0.154154 3.49181 0.462463L14.4009 8.88352C15.1997 9.50013 15.1997 10.4999 14.4009 11.1165L3.49181 19.5375C2.69301 20.1542 1.3979 20.1542 0.5991 19.5375C-0.1997 18.9209 -0.1997 17.9212 0.5991 17.3046L10.0618 10L0.5991 2.69543C-0.1997 2.07881 -0.1997 1.07908 0.5991 0.462463Z" fill="#2E3192"/>
   </svg>  
@@ -155,6 +157,7 @@ const fixedHeader = () => {
 };
 fixedHeader();
 if (location.pathname === "/") {
+  console.log("ahmed");
   scollLinksActive();
   showProducts();
 }

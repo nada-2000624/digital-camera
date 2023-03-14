@@ -312,14 +312,14 @@ nav a.active-link::after {
 .slick-arrow:hover::before {
   color: #fff;
 }
-.hover-button.slick-next,
+/* .hover-button.slick-next,
 .slick-arrow.slick-next {
-  right: -80px;
+  left: -80px;
 }
 .hover-button.slick-prev,
 .slick-arrow.slick-prev {
-  left: -80px;
-}
+  right: -80px;
+} */
 .hover-button::before,
 .slick-arrow::before {
   display: none;
@@ -3579,12 +3579,12 @@ nav a.active-link::after {
 
 .hover-button.slick-next,
 .slick-arrow.slick-next {
-  right: -80px;
+  left: -80px;
 }
 
 .hover-button.slick-prev,
 .slick-arrow.slick-prev {
-  left: -80px;
+  right: -80px;
 }
 
 .hover-button::before,
